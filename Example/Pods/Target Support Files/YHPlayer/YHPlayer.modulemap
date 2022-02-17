@@ -1,0 +1,6 @@
+framework module YHPlayer {
+  umbrella header "YHPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,23 @@
+PODS:
+  - SnapKit (4.2.0)
+  - YHPlayer (0.1.0):
+    - SnapKit
+
+DEPENDENCIES:
+  - YHPlayer (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  YHPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  YHPlayer: 7f27550516347e466e6a3b071b1694421dedc40e
+
+PODFILE CHECKSUM: 5730f30dcb019057c86292089fff6b76ca2217a5
+
+COCOAPODS: 1.11.2

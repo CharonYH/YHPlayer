@@ -1,10 +1,9 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'YHPlayer_Example' do
   pod 'YHPlayer', :path => '../'
-
   target 'YHPlayer_Tests' do
     inherit! :search_paths
 
