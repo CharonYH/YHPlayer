@@ -28,13 +28,13 @@ $ pod install
 And then import `import YHPlayer` where you use.
 
 ## How to use
-```
+```swift
 1.create YHPlayer
         let playView = YHPlayer(frame: .zero)
         playView.delegate = self
 ```
 
-```
+```swift
 2.create YHPlayerItemConfig
         let itemConfig = YHPlayerItemConfig(videoURL: videoURL1,
                                             isMuted: false,
@@ -42,12 +42,12 @@ And then import `import YHPlayer` where you use.
                                             thumbImg: .init(named: "thumbimg"))
 ```
 
-```
+```swift
 3.set itemConfig to player
         playView.config(with: itemConfig)
 ```
 
-```
+```swift
 4.custome your controlPanel
         playView.addCustomeControl(controlView)
 ```
