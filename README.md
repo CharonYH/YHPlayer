@@ -20,7 +20,6 @@ target 'YourProductName' do
     pod 'YHPlayer'
     ...
 ```
-```
 Install pods
 ```
 $ pod install
