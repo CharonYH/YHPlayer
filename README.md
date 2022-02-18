@@ -20,7 +20,13 @@ target 'YourProductName' do
     pod 'YHPlayer'
     ...
 ```
-And then import YHPlayer
+```
+Install pods
+```
+$ pod install
+```
+And then import `import YHPlayer`.
+
 ## How to use
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
