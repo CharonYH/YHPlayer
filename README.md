@@ -87,9 +87,9 @@ public protocol YHPlayerDelegate: NSObjectProtocol {
 ```
 
 ## Run result
-```
+<div>
 <img src="./img/result.gif" width="478px" height="562px"/>
-```
+</div>
 ## Author
 
 YEHAN, 2436567084@qq.com
