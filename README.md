@@ -7,6 +7,12 @@ An easy-to-use video player based on swift language
 [![License](https://img.shields.io/cocoapods/l/YHPlayer.svg?style=flat)](https://cocoapods.org/pods/YHPlayer)
 [![Platform](https://img.shields.io/cocoapods/p/YHPlayer.svg?style=flat)](https://cocoapods.org/pods/YHPlayer)
 
+## Features
+- [x] Plays local media or streams remote media over HTTP
+- [x] Custom UI control layer screen
+- [x] Support screen rotation 
+- [x] Simple API
+- [x] Clear delegate method  
 ## Requirements
 iOS 11.0 or later  
 xcode 11.0 or later
