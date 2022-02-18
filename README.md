@@ -88,8 +88,8 @@ public protocol YHPlayerDelegate: NSObjectProtocol {
 
 ## Run result
 <img src="./img/result.gif" width="478px" height="562px"/>
-## Author
 
+## Author
 YEHAN, 2436567084@qq.com
 
 ## License
