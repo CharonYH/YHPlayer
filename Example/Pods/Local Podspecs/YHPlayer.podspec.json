@@ -1,6 +1,6 @@
 {
   "name": "YHPlayer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "An easy-to-use video player based on swift language",
   "description": "TODO: The player provides a simple API and Delegate, and supports placeholder image for the first frame of the video.",
   "homepage": "https://github.com/CharonYH/YHPlayer",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CharonYH/YHPlayer.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "swift_versions": "5.0",
   "platforms": {

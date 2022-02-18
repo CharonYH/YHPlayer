@@ -6,7 +6,7 @@
 //
 import Foundation
 
-protocol Play {
+public protocol Play {
     
     func play()
     func replay()
@@ -15,7 +15,7 @@ protocol Play {
     func toggleMute()
     func seek(to specificedTime: TimeInterval)
 }
-extension Play {
+public extension Play {
     
     func play() {}
     func replay() {}

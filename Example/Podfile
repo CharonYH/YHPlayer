@@ -1,9 +1,10 @@
 use_frameworks!
-
+source 'https://github.com/CharonYH/YHPlayer.git'
 platform :ios, '11.0'
 
 target 'YHPlayer_Example' do
-  pod 'YHPlayer', :path => '../'
+#  pod 'YHPlayer', :path => '../'
+   pod 'YHPlayer'#, :git => 'https://github.com/CharonYH/YHPlayer.git'
   target 'YHPlayer_Tests' do
     inherit! :search_paths
 

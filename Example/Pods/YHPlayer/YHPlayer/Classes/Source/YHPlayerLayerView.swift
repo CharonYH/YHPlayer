@@ -7,11 +7,11 @@
 
 import UIKit
 import AVFoundation
-class YHPlayerLayerView: UIView {
+open class YHPlayerLayerView: UIView {
     deinit {
         print("88-YHPlayerLayerView")
     }
-    var player: AVPlayer? {
+    public var player: AVPlayer? {
         get { playerLayer.player }
         set {
             playerLayer.player = newValue
@@ -19,11 +19,11 @@ class YHPlayerLayerView: UIView {
         }
     }
     
-    var playerLayer: AVPlayerLayer {
+    public var playerLayer: AVPlayerLayer {
         return layer as! AVPlayerLayer
     }
     
-    override class var layerClass: AnyClass {
+    open override class var layerClass: AnyClass {
         return AVPlayerLayer.self
     }
 }

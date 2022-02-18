@@ -8,23 +8,23 @@
 import Foundation
 import UIKit
 
-struct YHPlayerItemConfig {
+public struct YHPlayerItemConfig {
     /// 视频地址
-    var videoURL: String
+    public var videoURL: String
     
     /// 是否静音
-    var isMuted: Bool
+    public var isMuted: Bool
     
     /// 是否自动播放
-    var isAutoPlay: Bool
+    public var isAutoPlay: Bool
     
     /// 占位图
-    var thumbImg: UIImage?
+    public var thumbImg: UIImage?
     
     /// 占位图URL
-    var thumbImgURL: String?
+    public var thumbImgURL: String?
     
-    init(videoURL: String,
+    public init(videoURL: String,
          isMuted: Bool = true,
          isAutoPlay: Bool = true,
          thumbImg: UIImage? = nil,
