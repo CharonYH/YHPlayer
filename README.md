@@ -59,6 +59,32 @@ And then import `import YHPlayer` where you use.
 ```
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## YHPlayerDelegate
+```swift
+public protocol YHPlayerDelegate: NSObjectProtocol {
+    /// 更新播放进度
+    func yhPlayer(_ player: YHPlayer, notifyCurrentProgress progress: TimeInterval)
+    
+    /// 更新缓冲进度
+    func yhPlayer(_ player: YHPlayer, notifyBufferProgress progress: TimeInterval)
+    
+    /// 准备播放
+    func yhPlayerReadyToPlay(_ player: YHPlayer)
+    
+    /// 失败播放
+    func yhPlayerFailedToPlay(_ player: YHPlayer, error: YHPlayer.Error)
+    
+    /// 播放完毕
+    func yhPlayerDidEndPlaying(_ player: YHPlayer)
+    
+    /// 播放中断（来电话等优先级高的）
+    func yhPlayerInterruptioned(_ player: YHPlayer, interruptionType type: YHPlayer.InterruptionType)
+    
+    /// 状态发生改变
+    func yhPlayerStatusChanged(_ player: YHPlayer, status: YHPlayer.PlayStatus)
+}
+```
+
 ## Run result
 
 ## Author
