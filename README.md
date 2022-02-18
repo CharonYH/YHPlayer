@@ -59,6 +59,8 @@ And then import `import YHPlayer` where you use.
 ```
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Run result
+
 ## Author
 
 YEHAN, 2436567084@qq.com
