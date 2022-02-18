@@ -7,6 +7,8 @@ An easy-to-use video player based on swift language
 [![License](https://img.shields.io/cocoapods/l/YHPlayer.svg?style=flat)](https://cocoapods.org/pods/YHPlayer)
 [![Platform](https://img.shields.io/cocoapods/p/YHPlayer.svg?style=flat)](https://cocoapods.org/pods/YHPlayer)
 
+https://www44.video2edit.com/dl/web7/download-file/9756b0de-bd21-48fc-bd3e-d6668c935cb4/result.mp4
+
 ## Features
 - [x] Plays local media or streams remote media over HTTP
 - [x] Custom UI control layer screen
