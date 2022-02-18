@@ -24,7 +24,7 @@ Install pods
 ```
 $ pod install
 ```
-And then import `import YHPlayer`.
+And then import `import YHPlayer` where you use.
 
 ## How to use
 
