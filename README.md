@@ -57,7 +57,6 @@ And then import `import YHPlayer` where you use.
 4.custome your controlPanel
         playView.addCustomeControl(controlView)
 ```
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## YHPlayerDelegate
 ```swift
