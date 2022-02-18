@@ -27,7 +27,8 @@ $ pod install
 And then import `import YHPlayer` where you use.
 
 ## How to use
-
+```swift
+```
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
