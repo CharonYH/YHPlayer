@@ -8,9 +8,10 @@
 import UIKit
 import AVFoundation
 import SnapKit
+
 private var YHPlayerObserverContext = 0
 
-public protocol YHPlayerDelegate: NSObjectProtocol {
+protocol YHPlayerDelegate: NSObjectProtocol {
     /// 更新播放进度
     func yhPlayer(_ player: YHPlayer, notifyCurrentProgress progress: TimeInterval)
     
@@ -32,7 +33,7 @@ public protocol YHPlayerDelegate: NSObjectProtocol {
     /// 状态发生改变
     func yhPlayerStatusChanged(_ player: YHPlayer, status: YHPlayer.PlayStatus)
 }
-public extension YHPlayerDelegate {
+extension YHPlayerDelegate {
     func yhPlayer(_ player: YHPlayer, notifyCurrentProgress progress: TimeInterval) {}
     func yhPlayer(_ player: YHPlayer, notifyBufferProgress progress: TimeInterval) {}
     func yhPlayerReadyToPlay(_ player: YHPlayer) {}
@@ -43,7 +44,7 @@ public extension YHPlayerDelegate {
 }
 
 
-open class YHPlayer: UIView {
+class YHPlayer: UIView {
     deinit {
         
         if let periodicTimeObserver = periodicTimeObserver {
@@ -69,19 +70,19 @@ open class YHPlayer: UIView {
         NotificationCenter.default.removeObserver(self, name: AVAudioSession.interruptionNotification, object: nil)
     }
     
-   public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         customView()
 
     }
     
     //MARK: - public properties
-    public weak var delegate: YHPlayerDelegate?
+    weak var delegate: YHPlayerDelegate?
     /// 视频时长
-    public private(set) var duration: TimeInterval  = 0
+    private(set) var duration: TimeInterval  = 0
     
     /// 自定义配置占位图
-    public var thumbImgBlock: ((UIImageView,UIImage?,String?) -> ())?
+    var thumbImgBlock: ((UIImageView,UIImage?,String?) -> ())?
     
     //MARK: - private properties
     private var player: AVPlayer!
@@ -129,7 +130,7 @@ open class YHPlayer: UIView {
         return thumbnailImgView
     }()
     
-    required public init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
@@ -137,7 +138,7 @@ open class YHPlayer: UIView {
 //MARK: - 播放相关
 extension YHPlayer: Play {
     /// 播放器状态
-    public var playerStatus: YHPlayer.PlayStatus {
+    var playerStatus: YHPlayer.PlayStatus {
         switch player?.timeControlStatus {
         case .playing: return .playing
         case .paused: return .paused
@@ -146,34 +147,34 @@ extension YHPlayer: Play {
         }
     }
     
-    public var isPlaying: Bool { playerStatus == .playing }
-    public var isPaused: Bool { playerStatus == .paused }
-    public var isMuted: Bool { player.isMuted }
+    var isPlaying: Bool { playerStatus == .playing }
+    var isPaused: Bool { playerStatus == .paused }
+    var isMuted: Bool { player.isMuted }
 
     /// 播放
-    public func play() {
+    func play() {
         player.play()
     }
     
     /// 重新播放
-    public func replay() {
+    func replay() {
         seek(to: 0)
         play()
     }
     
     /// 暂停
-    public func pause() {
+    func pause() {
         player.pause()
     }
     
     /// 静音
-    public func toggleMute() {
+    func toggleMute() {
         player.isMuted = !player.isMuted
     }
     
     /// 跳转到指定时间
     /// - Parameter specificedTime: 特定的时间
-    public func seek(to specificedTime: TimeInterval) {
+    func seek(to specificedTime: TimeInterval) {
         player.seek(to: .init(seconds: specificedTime, preferredTimescale: .init(NSEC_PER_SEC)))
     }
 }
@@ -252,7 +253,7 @@ extension YHPlayer {
 //MARK: - 屏幕处理
 extension YHPlayer {
     /// 全屏处理
-    public func fullScreen(_ enabled: Bool, rotationTo orientation: UIInterfaceOrientation? = nil) {
+    func fullScreen(_ enabled: Bool, rotationTo orientation: UIInterfaceOrientation? = nil) {
         guard let keyWindow = getKeyWindow(),canFullScreen else { return }
         playView.removeFromSuperview()
         guard playView.superview == nil else { return }
@@ -384,7 +385,7 @@ extension YHPlayer {
         player.currentItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.loadedTimeRanges), options: [.new,.old], context: &YHPlayerObserverContext)
     }
     
-    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+      override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
           guard context == &YHPlayerObserverContext else {
               super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
               return
@@ -447,7 +448,7 @@ private extension YHPlayer {
     }
     
     /// 程序中断
-    @objc func interruptionHandle(notification: Notification) {
+    @objc private func interruptionHandle(notification: Notification) {
         var interruptionType: YHPlayer.InterruptionType!
         if let userInfo = notification.userInfo as? [String:Any],
         let typeNumber = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
@@ -487,7 +488,7 @@ private extension YHPlayer {
 }
 
 //MARK: - 相关枚举
-public extension YHPlayer {
+extension YHPlayer {
     enum PlayStatus {
         case playing
         case paused

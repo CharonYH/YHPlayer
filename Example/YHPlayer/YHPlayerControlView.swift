@@ -8,7 +8,11 @@
 import UIKit
 import SnapKit
 
-let RATIO_WIDHT750  = UIScreen.main.bounds.width / 375.0
+//frame
+let KScreenSize   = UIScreen.main.bounds
+let KScreenWidth  = KScreenSize.size.width
+let KScreenHeight = KScreenSize.size.height
+let RATIO_WIDHT750  = KScreenWidth / 375.0
 
 protocol YHPlayerControlViewDelegate: NSObjectProtocol {
     func yhControlView(_ controlView: YHPlayerControlView, didClickMutedBtn: UIButton)

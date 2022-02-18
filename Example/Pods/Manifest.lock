@@ -1,5 +1,5 @@
 PODS:
-  - SnapKit (4.2.0)
+  - SnapKit (5.0.1)
   - YHPlayer (0.1.0):
     - SnapKit
 
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  YHPlayer: 7f27550516347e466e6a3b071b1694421dedc40e
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  YHPlayer: 985dc16a4713d4908821480f4b60e45c1431033b
 
 PODFILE CHECKSUM: 5730f30dcb019057c86292089fff6b76ca2217a5
 
