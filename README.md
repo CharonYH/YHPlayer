@@ -13,6 +13,8 @@ An easy-to-use video player based on swift language
 - [x] Support screen rotation 
 - [x] Simple API
 - [x] Clear delegate method  
+- [x] Audio Default is muted
+- [x] AutoPlay Default is False 
 ## Requirements
 iOS 11.0 or later  
 xcode 11.0 or later
