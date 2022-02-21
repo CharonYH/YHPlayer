@@ -25,7 +25,9 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 target 'YourProductName' do
-    pod 'YHPlayer', :git => 'https://github.com/CharonYH/YHPlayer.git'
+    pod 'YHPlayer', :git => 'https://github.com/CharonYH/YHPlayer.git' #Prevent slow remote pod updates
+    
+    or pod 'YHPlayer' #Directly
     ...
 ```
 
