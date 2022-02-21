@@ -25,7 +25,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 target 'YourProductName' do
-    pod 'YHPlayer'
+    pod 'YHPlayer', :git => 'https://github.com/CharonYH/YHPlayer.git'
     ...
 ```
 
