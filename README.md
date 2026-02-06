@@ -93,9 +93,6 @@ public protocol YHPlayerDelegate: NSObjectProtocol {
 <img src="./img/result.gif" width="478px" height="562px"/>
 </div>
 
-## Author
-YEHAN, 2436567084@qq.com
-
 ## License
 
 YHPlayer is available under the MIT license. See the LICENSE file for more info.
